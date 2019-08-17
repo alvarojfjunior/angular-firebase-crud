@@ -4,7 +4,6 @@ import { AngularFireDatabase } from '@angular/fire/database';
 
 //(MANUAL)
 import { map } from 'rxjs/operators';
-import { ChangeDetectionStrategy } from '@angular/compiler/src/core';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +11,8 @@ import { ChangeDetectionStrategy } from '@angular/compiler/src/core';
 export class ContatoService {
 
   constructor(private db: AngularFireDatabase) { }
+
+  // DENTRO DO SERVICE DE UM COMPONENT OU MODULE HAVERAM OS MÉTODOS DE COMUNICAÇÃO COM O BACKEND
 
   insert(contato: Contato) {
     //   o nó de operação    comando (push)

@@ -1,0 +1,25 @@
+<form style="max-width: 250px; margin: 0 auto;" (ngSubmit)="logOn()">
+
+    <div class="text-center">
+        <img src="../../../assets/img/user.png" alt="">
+
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)]="login.email" name="email" />
+    </div>
+
+    <div class="form-group">
+        <label>Senha</label>
+        <input type="password" class="form-control" [(ngModel)]="login.senha" name="senha" />
+    </div>
+    
+    <div class="text-center"><button type="submit" class="btn btn-info">Login</button></div>
+    <br>
+    <div class="text-center">
+        <a [routerLink]="['/entrar']" routerLinkActive="router-link-active" class="btn btn-outline-primary"> Entrar </a>
+        &nbsp;
+        <a [routerLink]="['/criar']" routerLinkActive="router-link-active" class="btn btn-outline-primary">&nbsp; Criar &nbsp;</a>
+    </div>
+</form>

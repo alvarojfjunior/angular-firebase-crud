@@ -10,19 +10,27 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { EditComponent } from './contatos/edit/edit.component';
 import { ListComponent } from './contatos/list/list.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AppRoutingModule } from './app-routing.module';
+import { EntrarComponent } from './login/entrar/entrar.component';
+import { CriarComponent } from './login/criar/criar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditComponent,
     ListComponent,
-    NavbarComponent
+    NavbarComponent,
+    EntrarComponent,
+    CriarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig), //(MANUAL)DEIXA TUDO PRONTO
-    AngularFireDatabaseModule //(MANUAL)
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig), //(MANUAL) DEIXA TUDO PRONTO
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
