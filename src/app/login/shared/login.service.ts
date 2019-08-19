@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { CanActivate, ActivatedRouteSnapshot, Router } from "@angular/router";
+import { ActivatedRouteSnapshot, Router } from "@angular/router";
 
 
 // OBSERVABLE É UM TIPO QUE ESPERA MUDANÇAS PARA TROCAR DE ESTADO
